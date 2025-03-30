@@ -1,0 +1,15 @@
+.subscribe-logo{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+ 
+}
+
+.subscribe-logo div{
+    height: 100px;
+    width: 12%;
+    text-align: center;
+
+}
+
