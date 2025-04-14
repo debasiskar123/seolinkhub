@@ -31,3 +31,22 @@
       let message = document.getElementById("message").value.trim()
       console.log(name,email,website,message)
     })
+
+
+
+
+    function animateCounter(id, start, end, steptime) {
+      let obj = document.querySelector(id);
+      let current = start;
+      let timer = setInterval(() => {
+        current = current+10,
+        obj.textContent = current;
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, steptime);
+    }
+    
+    animateCounter(".count-digit-1", 0, 7000,5);
+    animateCounter(".count-digit-2", 0, 5000,5);
+    animateCounter(".count-digit-3", 0, 150,200);
