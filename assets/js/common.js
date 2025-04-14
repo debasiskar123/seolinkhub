@@ -43,6 +43,7 @@
         obj.textContent = current;
         if (current == end) {
           clearInterval(timer);
+          obj.textContent = current + "+";
         }
       }, steptime);
     }
