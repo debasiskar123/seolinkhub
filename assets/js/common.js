@@ -51,3 +51,51 @@
     animateCounter(".count-digit-1", 0, 7000,5);
     animateCounter(".count-digit-2", 0, 5000,5);
     animateCounter(".count-digit-3", 0, 150,200);
+
+
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxvuJUMFs3_DhSK4Pc-6OkC-782BDxQsim3q_fZux-wcnExPf9ktscB0zH7BI8N_4TZDg/exec'
+
+const form = document.forms['contact-form']
+const formSubmittedSuccessfullyMsg = document.querySelector('.formSubmittedSuccessfullyMsg')
+//"Thank you for your message! We will get back to you soon."
+
+form.addEventListener('submit', e => {
+  
+  e.preventDefault()
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      formSubmittedSuccessfullyMsg.classList.add('active-msg')
+      setTimeout(() => {
+        formSubmittedSuccessfullyMsg.classList.remove('active-msg')
+      }, 10000)
+     
+    })
+    .then(() => form.reset())
+    .catch(error => console.error('Error!', error.message))
+
+
+})
+
+
+const subscribe_newsletters_msg = document.querySelector('.subscribe-newsletters-msg')
+const subscribe_newsletters = document.forms['subscribe-newsletters']
+subscribe_newsletters.addEventListener('submit', e => {
+
+  e.preventDefault()
+
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(subscribe_newsletters) })
+    .then(response =>  {
+      subscribe_newsletters_msg.classList.add('active-msg')
+      setTimeout(() => {
+        subscribe_newsletters_msg.classList.remove('active-msg')
+      }, 10000)
+    })
+    .then(() => subscribe_newsletters.reset())
+    .catch(error => console.error('Error!', error.message))
+})
+
+
