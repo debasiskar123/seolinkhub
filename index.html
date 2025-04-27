@@ -952,8 +952,10 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 align-self-center">
-          <form id="contact">
+       <div class="col-lg-5 align-self-center">
+          <p class="formSubmittedSuccessfullyMsg">Thank you for your message! We will get back to you soon.</p>
+         
+          <form id="contact" method="post" action="https://script.google.com/macros/s/AKfycbxvuJUMFs3_DhSK4Pc-6OkC-782BDxQsim3q_fZux-wcnExPf9ktscB0zH7BI8N_4TZDg/exec" name="contact-form">
             <div class="row">
               <div class="col-lg-12">
                 <fieldset>
@@ -979,8 +981,9 @@
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <button class="main-button submit-request">Submit Request</button>
+                  <button type="submit" value="Submit" id="submit" class="main-button submit-request">Submit Request</button>
                 </fieldset>
+      
               </div>
             </div>
           </form>
