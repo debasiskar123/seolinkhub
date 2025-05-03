@@ -42,15 +42,16 @@ h1{
   /* demo styles */
   
   @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-  section{
+  #web-table{
     background: -webkit-linear-gradient(left, #25c481, #25b7c4);
     background: linear-gradient(to right, #25c481, #25b7c4); 
     font-family: 'Roboto', sans-serif;
   }
-  section{
+  #web-table{
     margin: 50px;
     border-radius: 20px;
   }
+  
   
   
   /* follow me template */
