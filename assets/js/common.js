@@ -99,3 +99,33 @@ subscribe_newsletters.addEventListener('submit', e => {
 })
 
 
+// feedback
+
+
+const radios = document.querySelectorAll('.feedback-section input[type="radio"]');
+let current = 0; // starts from the 3rd radio (index 2)
+let intervalId;
+setInterval(() => {
+ 
+
+  if (current === 0) {
+    intervalId = 0;
+  }
+  if( current === 4) {
+    intervalId = 4;
+  }
+
+  if (intervalId === 0) {
+     current += 1;
+  }
+
+  if (intervalId === 4) {
+     current -= 1;
+  }
+
+  radios[current].checked = true;
+  
+}, 3000);
+
+
+
