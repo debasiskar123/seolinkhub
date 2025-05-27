@@ -948,7 +948,7 @@ Banner Style
   margin-left: 30px;
 }
 
-.main-banner .owl-dots {
+/* .main-banner .owl-dots {
   margin-top: 60px;
   counter-reset: dots;
 }
@@ -965,7 +965,7 @@ Banner Style
   text-align: center;
   border-bottom: 3px solid transparent;
   transition: all .5s;
-}
+} */
 
 .main-banner .active:before {
   color: #ff685f;
