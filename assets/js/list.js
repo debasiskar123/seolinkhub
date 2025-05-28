@@ -1879,25 +1879,24 @@ let list = [
 
 
 
+function sortByTraffic(data) {
+  return data.sort((a, b) => {
+    
+    const parseTraffic = (trafficStr) => {
+      if (trafficStr.includes('K')) {
+        return parseFloat(trafficStr) * 1000;
+      } else if (trafficStr.includes('M')) {
+        return parseFloat(trafficStr) * 1000000;
+      }
+      return parseFloat(trafficStr);
+    };
+
+    return parseTraffic(b.Traffic) - parseTraffic(a.Traffic);
+  });
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+list = sortByTraffic(list);
 
 
 
