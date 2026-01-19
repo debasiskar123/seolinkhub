@@ -7,13 +7,6 @@ let list = [
     Traffic: "1.8M"
   },
   {
-    Websites: "https://www.imei.info/",
-    DA: "68",
-    PA: "61",
-    DR: "73",
-    Traffic: "1.5M"
-  },
-  {
     Websites: "https://www.outlookindia.com/",
     DA: "91",
     PA: "69",
@@ -852,4 +845,5 @@ list.forEach(element => {
 </tr>
     `
 });
+
 
